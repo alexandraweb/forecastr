@@ -19,7 +19,7 @@ prediction_method: "ordinal"
 ## Path to file containing repeats to estimate
 ## tab seperated texf file with columns: chr, repeat_start_coord, repeat_stop_coord, repeat_unit
 ## Coordinates and repeat units are based on the reference genome
-repeat_file: "./resources/repeats.txt"
+repeat_file: "resources/repeats.txt"
 ## Include chromosomes of interest (inlcuded in the repeat file)
 chrs:
         - 1
@@ -33,7 +33,7 @@ training_snp_vcf:
         - "resources/1kg_snp.vcf.gz"
 
 ## Path to VCF with SNP calls for prediction group samples 
-predict_snp_vcf: "./resources/1kg_snp.vcf.gz"
+predict_snp_vcf: "resources/1kg_snp.vcf.gz"
 
 ## Path to sample populaion information file 
 ## tab sepearted text file with columns: sample_name, population_code 
