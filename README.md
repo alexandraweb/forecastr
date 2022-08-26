@@ -18,7 +18,7 @@ From the forecastr directory, run:
 `snakemake --configfile config/config_test.yml --use-singularity --use-conda --cores all`
 
 ## Quick Start
-Fill out the configfile at `config.yml` with the approiate file paths and run from the forecastr directory:  
+Fill out the configfile at `config/config.yml` with the approiate file paths and run from the forecastr directory:  
 `snakemake --configfile config/config.yml --use-singularity --use-conda --cores all`
 
 ## Output
