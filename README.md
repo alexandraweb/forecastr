@@ -17,7 +17,7 @@ Singularity (v3.9.8) - https://docs.sylabs.io/guides/3.0/user-guide/installation
 `snakemake --configfile config/config_test.yml --use-singularity --use-conda --cores all`
 
 ## Quick Start
-Fill out the configfile at `config.yml` with the approiate file paths and run:
+Fill out the configfile at `config.yml` with the approiate file paths and run:  
 `snakemake --configfile config/config.yml --use-singularity --use-conda --cores all`
 
 ## Output
