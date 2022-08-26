@@ -1,0 +1,36 @@
+import os
+
+
+
+## DIRECTORIES
+OUTDIR=config["outdir"]
+TMPDIR=config["tmpdir"]
+method=config["detection_method"]
+
+
+if not os.path.exists(OUTDIR):
+    os.makedirs(OUTDIR)
+if not os.path.exists(TMPDIR):
+    os.makedirs(TMPDIR)
+    
+
+include: "rules/predict_strs_byChr.smk"
+include: "rules/index_vcf.smk"
+
+rule all:
+    input:
+        expand("{outdir}/forecastr.vcf.gz", outdir=OUTDIR)
+
+rule combine_vcfs:
+    input:
+        expand("{{outdir}}/chr{chr}_forecastr.vcf.gz", chr=config["chrs"])
+    output:
+        "{outdir}/forecastr.vcf"
+    shell:
+        """
+        module load Bioinformatics
+        module load bcftools
+       
+        bcftools concat {input} > {output}
+        rm {input}
+        """

@@ -1,0 +1,72 @@
+## Path to directory for writing ouput
+outdir: "results"
+## Path to directory for writing intermediate files (can be the same as output)
+tmpdir: "tmp"
+
+## Method used to characterize STRs from WGS (options: eh [Expansion Hunter], gangstr)
+detection_method: "eh"
+## Method to use to predict STR length (options: ordinal, linear, random)
+prediction_method: "ordinal"
+
+
+## Path to file containing repeats to estimate
+## tab seperated texf file with columns: chr, repeat_start_coord, repeat_stop_coord, repeat_unit
+## Coordinates and repeat units are based on the reference genome
+repeat_file: ""
+## Include chromosomes of interest (inlcuded in the repeat file)
+chrs:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+        - 22
+
+## Path to VCF with STR and SNP calls for reference group samples 
+## (multiple files supported)
+training_str_vcf: 
+        - ""
+training_snp_vcf: 
+        - ""
+
+## Path to VCF with SNP calls for prediction group samples 
+predict_snp_vcf: ""
+
+## Path to sample populaion information file 
+## tab sepearted text file with columns: sample_name, population_code 
+training_sample_populations: ""
+predict_sample_populations: ""
+
+
+
+## Path to text files containing samples to use in the training and prediction groups (one sample per line)
+##
+## These can be used to test the accuracy of the method by comparing the WGS STR length estimation
+## to the SNP haplotype estimation. Use the same STR and SNP VCF file for both the training and prediction
+## groups. Designate which samples belong to which groups in these two files.
+##
+## Use NA if not using these
+training_samples: "NA"
+predict_samples: "NA"
+
+## Path to bedfile containing the genomic coordinates included in the SNP arrays of prediction samples 
+## (for simulating arrays in testing runs)
+array_coords: ""
+
+         
