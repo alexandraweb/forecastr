@@ -14,10 +14,11 @@ Singularity (v3.9.8) - https://docs.sylabs.io/guides/3.0/user-guide/installation
 `git clone https://github.com/alexandraweb/forecastr.git`
 
 ## Test installation
+From the forecastr directory, run:  
 `snakemake --configfile config/config_test.yml --use-singularity --use-conda --cores all`
 
 ## Quick Start
-Fill out the configfile at `config.yml` with the approiate file paths and run:  
+Fill out the configfile at `config.yml` with the approiate file paths and run from the forecastr directory:  
 `snakemake --configfile config/config.yml --use-singularity --use-conda --cores all`
 
 ## Output
